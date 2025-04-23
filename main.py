@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import uvicorn
 from pydantic import BaseModel
+
 #Инициализируем приложение
 app = FastAPI()
 
@@ -43,8 +44,6 @@ def create_book(new_book: NewBook):
         'author': new_book.author,
     })
     return {'success': True}
-
-
 
 
 
